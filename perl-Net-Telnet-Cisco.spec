@@ -1,8 +1,7 @@
 %define module  Net-Telnet-Cisco
 %define name    perl-%{module}
 %define version 1.10
-%define release %mkrel 2
-
+%define release %mkrel 3
 
 Name:		 %name
 Summary:	 Net-Telnet-Cisco Perl module
@@ -16,14 +15,12 @@ URL:		 http://search.cpan.org/dist/%{module}
 Buildarch:	noarch
 
 %description
-    Net::Telnet::Cisco adds additional functionality to 
-    Net::Telnet that helps you automate Cisco router management
-    and statistic gathering.
-
+Net::Telnet::Cisco adds additional functionality to 
+Net::Telnet that helps you automate Cisco router management
+and statistic gathering.
 
 %prep
-
-%setup
+%setup -q
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -31,9 +28,7 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %makeinstall_std
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -43,5 +38,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Net/Telnet/*
 %{perl_vendorlib}/auto/Net/Telnet/*
 %{_mandir}/*/*
-
 
