@@ -10,7 +10,6 @@ Release:	 %release
 License:	 GPL or Artistic
 Group:		 Development/Perl
 Source:		 ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/%{name}-%{version}.tar.bz2
-BuildRoot:	 %_tmppath/%name-%version-root
 URL:		 http://search.cpan.org/dist/%{module}
 Buildarch:	noarch
 
