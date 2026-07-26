@@ -1,15 +1,13 @@
 %define upstream_name    Net-Telnet-Cisco
-%define upstream_version 1.12
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.12
+Release:	2
 
 Summary:	Net-Telnet-Cisco Perl module
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Net-Telnet-Cisco
-Source0:	https://cpan.metacpan.org/authors/id/V/VI/VINSWORLD/Net-Telnet-Cisco-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/V/VI/VINSWORLD/Net-Telnet-Cisco-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ Net::Telnet that helps you automate Cisco router management
 and statistic gathering.
 
 %prep
-%setup -q -n %{name}-%{upstream_version}
+%setup -q -n %{name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -38,9 +36,7 @@ make
 %changelog
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.100.0-1mdv2010.0
 + Revision: 404248
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 1.10-5mdv2009.0
+- rebuild using %1.12 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 1.10-5mdv2009.0
 + Revision: 241804
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
