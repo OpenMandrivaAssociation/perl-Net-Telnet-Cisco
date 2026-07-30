@@ -2,7 +2,7 @@
 %define upstream_version 1.12
 Name:		perl-%{upstream_name}
 Version:	1.12
-Release:	1
+Release:	2
 
 Summary:	Net-Telnet-Cisco Perl module
 License:	GPL+ or Artistic
@@ -20,7 +20,7 @@ Net::Telnet that helps you automate Cisco router management
 and statistic gathering.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n Net-Telnet-Cisco-1.12
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
