@@ -1,13 +1,14 @@
 %define upstream_name    Net-Telnet-Cisco
+%define upstream_version 1.12
 Name:		perl-%{upstream_name}
 Version:	1.12
-Release:	2
+Release:	1
 
 Summary:	Net-Telnet-Cisco Perl module
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Net-Telnet-Cisco
-Source0:	https://cpan.metacpan.org/authors/id/V/VI/VINSWORLD/Net-Telnet-Cisco-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/V/VI/VINSWORLD/Net-Telnet-Cisco-1.12.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -32,29 +33,4 @@ make
 %{perl_vendorlib}/Net/Telnet/*
 %{perl_vendorlib}/auto/Net/Telnet/*
 %{_mandir}/*/*
-
-%changelog
-* Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.100.0-1mdv2010.0
-+ Revision: 404248
-- rebuild using %1.12 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 1.10-5mdv2009.0
-+ Revision: 241804
-- rebuild
-- kill re-definition of %%buildroot on Pixel's request
-
-  + Olivier Blin <oblin@mandriva.com>
-    - restore BuildRoot
-
-* Tue May 08 2007 Olivier Thauvin <nanardon@mandriva.org> 1.10-3mdv2008.0
-+ Revision: 25196
-- rebuild
-
-
-* Fri Apr 28 2006 Nicolas Lécureuil <neoclust@mandriva.org> 1.10-2mdk
-- Fix SPEC according to Perl Policy
-	- Source URL
-	- URL
-- use mkrel
-
-* Tue Feb 17 2004 Lenny Cartier <lenny@mandrakesoft.com> 1.10-1mdk
-- 1.10
 
